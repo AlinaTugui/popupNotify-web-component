@@ -47,7 +47,7 @@ template.innerHTML = `
         </g>
     </svg>
     <div class="notify-container">
-    <slot name="message" />
+    <slot name="message" class="text"/>
     </div>
 </div>
 `;
@@ -63,6 +63,7 @@ class PopupNotify extends HTMLElement {
         const tooltip = this.shadowRoot.querySelector('.notify-container');
         const alert = this.shadowRoot.querySelector('.alert');
         const cancel = this.shadowRoot.querySelector('.cancel');
+        const textFont = this.shadowRoot.querySelector('.text')
 
         if(expandState == true) {
             tooltip.style.transform = 'scale(1)';
@@ -90,6 +91,10 @@ class PopupNotify extends HTMLElement {
 
         if(this.getAttribute('tip_color')) {
             this.shadowRoot.querySelector('.notify-container').style.color = this.getAttribute('tip_color');
+        }
+
+        if(this.getAttribute('text_font')) {
+            this.shadowRoot.querySelector('.text').style.fontFamily = this.getAttribute('text_font');
         }
     }
 }

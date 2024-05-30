@@ -9,11 +9,17 @@
 <body>
     <div class="container">
         <h1>My awesome tooltip</h1>
-        <p>Lorem ipsum dolor sit amet
-            <popup-notify tip_background ="#ffcc00" tip_color="">
-                <span slot="message">Lorem ipsum dolor sit amet consectetur adipiscing elit.</span>
+        <p>This is my custom tooltip
+            <popup-notify tip_background ="#ffcc00" text_font="Courier New, monospace">
+                <span slot="message">it is very useful in case you have to add extra info inline</span>
             </popup-notify>
-            consectetur adipiscing elit. </p>
+            . I hope you like it:)</p>
+
+        <p>It can be easily customized
+            <popup-notify tip_background ="#e1e6e1" tip_color="#325aa8">
+                <span slot="message">by changing text color, background or fonts</span>
+            </popup-notify>
+        </p>
     </div>
 <script src="popupNotify.js"></script>
 </body>
